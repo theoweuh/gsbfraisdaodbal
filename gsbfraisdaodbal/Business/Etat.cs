@@ -8,14 +8,19 @@ namespace gsbfraisdaodbal.Business
 {
     public class Etat
     {
+        private int id;
+        private string libelle;
+
+        public int Id { get; set; }
+        public string Libelle { get; set; }
+
         public Etat(int id, string libelle)
         {
-            this.id = id;
-            this.libelle = libelle;
+            this.Id = id;
+            this.Libelle = libelle;
         }
 
-        private int id { get; set; }
-        private string libelle { get; set; }
+
 
     }
 }

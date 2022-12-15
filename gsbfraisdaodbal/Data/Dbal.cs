@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-
+using MySql.Data.MySqlClient;
 namespace gsbfraisdaodbal.Data
 {
     public class Dbal
@@ -130,77 +130,4 @@ namespace gsbfraisdaodbal.Data
         }
     }
 
-    internal class MySqlCommand
-    {
-        private string query;
-        private MySqlConnection connection;
-
-        public MySqlCommand(string query, MySqlConnection connection)
-        {
-            this.query = query;
-            this.connection = connection;
-        }
-
-        internal void ExecuteNonQuery()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    [Serializable]
-    internal class MySqlException : Exception
-    {
-        public MySqlException()
-        {
-        }
-
-        public MySqlException(string? message) : base(message)
-        {
-        }
-
-        public MySqlException(string? message, Exception? innerException) : base(message, innerException)
-        {
-        }
-
-        protected MySqlException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
-    }
-
-    internal class MySqlConnection
-    {
-        private string connectionString;
-
-        public MySqlConnection(string connectionString)
-        {
-            this.connectionString = connectionString;
-        }
-
-        internal void Close()
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void Open()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    internal class MySqlDataAdapter
-    {
-        public MySqlDataAdapter(string query, MySqlConnection connection)
-        {
-            Query = query;
-            Connection = connection;
-        }
-
-        public string Query { get; }
-        public MySqlConnection Connection { get; }
-
-        internal void Fill(DataSet dataset)
-        {
-            throw new NotImplementedException();
-        }
-    }
 }
