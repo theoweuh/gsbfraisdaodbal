@@ -8,7 +8,17 @@ namespace gsbfraisdaodbal.Business
 {
     public class FicheFrais
     {
-        public FicheFrais(int id, string mois, int nbJustificatifs, decimal montantValid, DateTime dateModif)
+
+        private int id;
+        private string mois;
+        private int nbJustificatifs;
+        private decimal montantValid;
+        private DateTime dateModif;
+        private User user;
+        private Etat etat;
+
+
+        public FicheFrais(int id, string mois, int nbJustificatifs, decimal montantValid, DateTime dateModif, User user, Etat etat)
         {
             this.id = id;
             this.mois = mois;
@@ -17,11 +27,12 @@ namespace gsbfraisdaodbal.Business
             this.dateModif = dateModif;
         }
 
-        private int id { get; set; }
-        private string mois { get; set; }
-        private int nbJustificatifs { get; set; }
-        private decimal montantValid { get; set; }
-        private DateTime dateModif { get; set; }
-
+        public int Id { get => id; set => id = value; }
+        public string Mois { get => mois; set => mois = value; }
+        public int NbJustificatifs { get => nbJustificatifs; set => nbJustificatifs = value; }
+        public decimal MontantValid { get => montantValid; set => montantValid = value; }
+        public DateTime DateModif { get => dateModif; set => dateModif = value; }
+        public User User { get => user; set => user = value; }
+        public Etat Etat { get => etat; set => etat = value; }
     }
 }

@@ -18,7 +18,19 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Console.WriteLine(unEtat.Id + "-" + unEtat.Libelle);
             }
 
+        }
+        static void Main2(string[] args)
+        {
+            Dbal dbalFicheFrais = new Dbal("gsb_frais_synfony");
+            DaoFicheFrais daoFicheFrais = new DaoFicheFrais(dbalFicheFrais);
 
+            List<FicheFrais> lesFichesFrais = daoFicheFrais.SelectAll();
+
+            foreach (FicheFrais uneFicheFrais in lesFichesFrais)
+
+            {
+                Console.WriteLine(uneFicheFrais.)
+            }
         }
     }
 }

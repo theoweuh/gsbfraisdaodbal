@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace gsbfraisdaodbal.NewFolder
+namespace gsbfraisdaodbal.Business
 {
     public class User
     {
